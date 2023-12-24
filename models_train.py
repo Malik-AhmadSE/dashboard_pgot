@@ -14,7 +14,7 @@ from sklearn.model_selection import train_test_split
 import warnings
 from xgboost import XGBRegressor
 from xgboost import XGBRFRegressor
-df = pd.read_csv("BTCDATA.csv")
+df = pd.read_csv("BTC_15Minute.csv")
 warnings.filterwarnings("ignore", category=UserWarning)
 # take a look at the dataset
 #df.head()
@@ -33,6 +33,6 @@ reg.fit(x, y)
 
 # Saving model to disk
 # Pickle serializes objects so they can be saved to a file, and loaded in a program again later on.
-joblib.dump(reg, 'Model_RF_1m.joblib')
+joblib.dump(reg, 'Model_test_1m.sav')
 #model = pickle.load(open('model.pkl','rb'))
 #print(model.predict([[2.6, 8, 10.1]]))
