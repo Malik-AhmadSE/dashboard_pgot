@@ -12,10 +12,11 @@ kline_data_1m=None
 kline_data_5m=None
 kline_data_15m=None
 kline_data_3m=None
-model_1m = joblib.load('Model_1m.joblib',mmap_mode='r')
-model_3m = joblib.load('Model_3m.joblib',mmap_mode='r')
-model_5m = joblib.load('Model_5m.joblib',mmap_mode='r')
-model_15m = joblib.load('Model_15m.joblib',mmap_mode='r')
+
+model_3m = joblib.load('Model_3m.joblib')
+model_5m = joblib.load('Model_5m.joblib')
+model_15m = joblib.load('Model_15m.joblib')
+model_1m = joblib.load('Model_1m.joblib')
 @socketio.on('connect')
 def Live_stream():
     def One_Minute_Function():
